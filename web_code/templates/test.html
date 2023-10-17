@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% block header %}
+{% include 'header.html' %}
+{% endblock %}
+{% block body %}
+
+    <main>
+        <div class="container pt-4 mb-4">
+            <h3 class="pt-4">독서능력 진단 평가 : </h3>
+            <div class="example">
+                <form action="/test" method='POST'>
+                    <ol>
+                        <li>다음은 원래의 낱말 뜻과는 다른 의미로 굳어져 일상
+                            생활에서 쓰이는 관용표현이다. 그 뜻이 잘못 풀이된
+                            것을 고르라. (*관용어 - 습관적으로 쓰는 말)
+                            <ul>
+                                <div class="form-check">
+                                    <li>
+                                            <input class="form-check-input" type="radio" name="1" value ="1">
+                                            쓸개가 없다 : 하는 짓이 이치에 맞지 않고 줏대가 없다.
+                                    </li>
+                                    <li>
+                                            <input class="form-check-input" type="radio" name="1" value ="2">
+                                            말머리를 돌리다 : 이야기의 방향을 바꾸다.
+                                    </li>
+                                    <li>
+                                            <input class="form-check-input" type="radio" name="1" value ="3">
+                                            입에 풀칠하다 : 입이 붙어서 떨어지지 않는다
+                                    </li>
+                                    <li>
+                                            <input class="form-check-input" type="radio" name="1" value ="4">
+                                            볼멘소리를 하다 : 서운하거나 성이 나서 퉁명스럽게 말을 하다.
+                                    </li>
+                                    <li>
+                                            <input class="form-check-input" type="radio" name="1" value ="5">
+                                            코빼기도 보이지 않다. : 도무지 모습을 나타내지 않는다.
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
+
+                       <li>다음은 원래의 낱말 뜻과는 다른 의미로 굳어져 일상
+                            생활에서 쓰이는 관용표현이다. 그 뜻이 잘못 풀이된
+                            것을 고르라. (*관용어 - 습관적으로 쓰는 말)
+                            <ul>
+                                <div class="form-check">
+                                    <li>
+                                            <input class="form-check-input" type="radio" name="2" value ="1">
+                                            쓸개가 없다 : 하는 짓이 이치에 맞지 않고 줏대가 없다.
+                                    </li>
+                                    <li>
+                                            <input class="form-check-input" type="radio" name="2" value ="2">
+                                            말머리를 돌리다 : 이야기의 방향을 바꾸다.
+                                    </li>
+                                    <li>
+                                            <input class="form-check-input" type="radio" name="2" value ="3">
+                                            입에 풀칠하다 : 입이 붙어서 떨어지지 않는다
+                                    </li>
+                                    <li>
+                                            <input class="form-check-input" type="radio" name="2" value ="4">
+                                            볼멘소리를 하다 : 서운하거나 성이 나서 퉁명스럽게 말을 하다.
+                                    </li>
+                                    <li>
+                                            <input class="form-check-input" type="radio" name="2" value ="5">
+                                            코빼기도 보이지 않다. : 도무지 모습을 나타내지 않는다.
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
+                    </ol>
+                    <div class="col text-center">
+                        <a href=“/result”><button class="btn btn-danger btn-lg btn-block" type="submit">제 출</button></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

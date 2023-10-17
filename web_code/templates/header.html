@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<div class="sticky">
+  <header>
+      <div class="header_wrap">
+        <h1 class="logo"><a href="/"><img src="{{ url_for('static', filename='/LOGO/logo_red.png') }}" alt="로고"></a></h1>
+        <nav>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                {% if session['is_loged_in'] %}
+                <a class="btn btn-danger" href="/logout"> {{session['username']}} 님,  로그아웃</a>
+                {% else %}
+                <a class="btn btn-primary" href="/login">로그인</a>
+                {% endif %}
+          </div>
+        </nav>
+      </div>
+  </header>
+</div>
